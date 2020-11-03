@@ -1,0 +1,67 @@
+{% extends 'task/base.html' %}
+
+
+{% block title %}
+Tasks
+{% endblock %}
+
+{% block content %}
+
+
+<div class="form">
+    <form method="POST" action="/" autocomplete="off">
+        {% csrf_token %}
+        {{form.title}}
+        <!-- <div class="important-btn">
+            !{{form.important}}
+        </div> -->
+        <div class="submit-btn">
+            <input class="submit-btn" type="submit" value="Create Todo">
+        </div>
+    </form>
+</div>
+
+<div class="tasks">
+    <div class="todo-container">
+        <ul class="todo-list">
+            <!-- Important Tasks -->
+            {% for task in tasks %}
+            {% if task.important and not task.complete %}
+            <div class="important-tasks">
+                <li class="todo-item" style="color: red;"><b>{{task}}</b></li>
+                <a class="update-btn" href="{% url 'update_task' task.id %}">Update</a>
+                <a class="delete-btn" href="{% url 'delete_task' task.id %}">Delete</a>
+
+            </div>
+            {% endif %}
+            {% endfor %}
+
+            <!-- Incomplete tasks -->
+            {% for task in tasks %}
+            {% if not task.complete and not task.important %}
+            <div class="incomplete-tasks">
+                <li class="todo-item">{{task}} </li>
+                <a class="update-btn" href="{% url 'update_task' task.id %}">Update</a>
+                <a class="delete-btn" href="{% url 'delete_task' task.id %}">Delete</a>
+            </div>
+
+            {% endif %}
+            {% endfor %}
+
+            <!-- Tasks done -->
+            {% for task in tasks %}
+            {% if task.complete %}
+            <div class="completed-tasks">
+                <li class="todo-item"><strike>{{task}}</strike> </li>
+                <a class="update-btn" href="{% url 'update_task' task.id %}">Update</a>
+                <a class="delete-btn" href="{% url 'delete_task' task.id %}">Delete</a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </ul>
+
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'task/base.html' %}
+
+{% block title %}
+Update Task
+{% endblock %}
+
+{% block content %}
+<h3 class="update-task-head">
+    Update Task
+</h3>
+<br>
+<form method="POST" action="" autocomplete="off">
+    <ul class="update-task-list">
+        {% csrf_token %}
+        <div class="update-form">
+            {{form.title}}
+            <hr>
+            <li> Completed: {{form.complete}}</li>
+            <li> Important: {{form.important}}</li>
+            {{form.created}}
+        </div>
+        <br>
+        <li>
+            <input class="update-task-submit-btn" type="submit" name="Update Task" value="Update">
+        </li>
+    </ul>
+</form>
+{% endblock %}

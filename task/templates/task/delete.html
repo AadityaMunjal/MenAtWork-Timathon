@@ -1,0 +1,31 @@
+{% extends 'task/base.html' %}
+
+{% block title %}
+Delete Task
+{% endblock %}
+
+{% block content %}
+
+<div class="delete-form">
+	<p class="exclamation"><b>Are you sure you want to delete "{{item}}"?</b></p>
+
+	<form method="POST" action="">
+		{% csrf_token %}
+		<li style="list-style: none;">
+		<a class="cancel-btn" href="{% url 'list' %}" style="
+		padding: 0.75rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+	text-decoration: none;
+		">Cancel</a>
+		<input class="submit-btn" type="submit" name="Delete" value="Yes delete it!">
+		</li>
+	</form>
+</div>
+
+{% endblock %}
