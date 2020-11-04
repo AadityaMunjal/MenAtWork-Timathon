@@ -1,5 +1,5 @@
 # MenAtWork-Timathon
-## GetListed
+## Get Arrayed
 ### This is a submission for Tech with Tim's 2nd Code Jam: Timathon.
 ### Topic: For students
 
