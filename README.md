@@ -4,21 +4,31 @@
 ### Topic: For students
 
 
-This project is built using python 3.8.2 and Django 3.0. Please use django 3.0!
+This website is a Todo list project (which we like to call as 'Get Arrayed').
 
-This is a To-do list made using Django, python, html and css for database it uses sqlite.
+### Built using 
+Language: python 3.8.2, 
+WebFramework: Django 3.0. 
+HTML and CSS
+Please use django 3.0!
 
+### Running the Project
 To see it for yourself make sure you are in the right directory and then type 'python manage.py runserver' in your command prompt or terminal.
 
 PS: The background colors change btw!
 
 Home page:
 ![Home page](ProjectImages/home.JPG)
+ 
 Delete page:
-![Delete task](ProjectImages/delete.JPG)
-UPdate task:
+![Delete task](ProjectImages/delete.JPG) 
+ 
+Update task:
 ![Update task](ProjectImages/update.JPG)
+
 Howto page:
 ![howto](ProjectImages/howto.JPG)
 
+### Authors
 Contributors: Aaditya Munjal, Faneesh Munjal
+We are pronounced as 'AA-D-TYA MOON-JAAL', 'Fun-eesh MOON-JAAL' 
