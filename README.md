@@ -10,7 +10,7 @@ This is a To-do list made using Django, python, html and css for database it use
 
 To see it for yourself make sure you are in the right directory and then type 'python manage.py runserver' in your command prompt or terminal.
 
-PS: The background color change btw!
+PS: The background colors change btw!
 
 Home page:
 ![Home page](ProjectImages/home.JPG)
