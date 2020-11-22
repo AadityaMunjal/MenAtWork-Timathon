@@ -31,5 +31,3 @@ Howto page:
 
 ### Authors
 Contributors: Aaditya Munjal, Faneesh Munjal.
-
-We are pronounced as 'AA-D-TYA MOON-JAAL', 'Fun-eesh MOON-JAAL' 
